@@ -1,0 +1,31 @@
+/* background color */
+body {
+    background-color: rgb(41, 39, 39);
+}
+
+/* header 1 style */
+h1 {
+    color: red;
+}
+
+/* style for list */
+ul {
+    list-style-type: disc;
+}
+
+li {
+    list-style-type: disc;
+    float: left;
+}
+
+/* header 2 style */
+h2 {
+    font-weight: bold;
+    color:rgb(87, 202, 87);
+    font-size: 48px;
+}
+
+/* link color */
+a:link {
+    color: rgb(255, 238, 0);
+  }
