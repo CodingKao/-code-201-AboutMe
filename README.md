@@ -67,6 +67,8 @@ A style guide is a series of standards and practices that must be followed in or
 
 
 ## Lighthouse Score
+### Class 2
 ![Lighthouse](img/lighthouse.jpg)
 
+### Class 3
 ![Lighthouse](img/lighthouse2.jpg)

@@ -1,10 +1,13 @@
-img0 {
-    align-items: stretch;
-}
 
 /* background color */
-body {
+body, html {
     background-color: rgb(41, 39, 39);
+    color: white;
+}
+
+imgBanner {
+    width: 100%;
+    align-items: center;
 }
 
 /* header 1 style */
@@ -13,11 +16,82 @@ body {
 }
 
 /* header 2 style */
-h2 {
+
+
+
+#sec0 {
+    display: flex;
+    text-align: center;
+}
+
+#me {
+    display: flex;
+    text-align: center;
+}
+
+/* #proj1 {
+    float: left;
+    text-align: center;
+    padding: 15px;
+    border: 15px;
+    margin: 15px;
+    border-color: 30px lightcoral;
+} */
+
+projtext {
+    text-align: center;
+    float: right;
+}
+
+
+#sec2 {
+    display: flex;
+    text-align: center;
+}
+
+#topten2 {
     font-weight: bold;
     color:rgb(87, 202, 87);
-    font-size: 48px;
+    font-size: 25px;
+    text-align: center;
 }
+
+#hobbies2 {
+    font-weight: bold;
+    color:rgb(87, 202, 87);
+    font-size: 25px;
+    text-align: center;
+}
+
+
+#ten {
+    color:rgb(248, 248, 248);
+    font-size: 25px;
+    text-align: left;
+}
+
+#hobby {
+    color:rgb(248, 248, 248);
+    font-size: 25px;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+}
+
+
+
+img1 {
+    border-image-width: 10px;
+    width: 100%;
+}
+
+exp {
+    display: flex;
+
+}
+
 
 /* style for list */
 ul li {
@@ -38,6 +112,17 @@ a:visited {
     color: coral;
 }
 
-footer {
+p {
+    text-align: right;
+}
+
+h2 {
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    color:rgb(48, 190, 48);
     text-align: center;
+    padding: 15px;
+    border: 30px;
+    margin: 45px;
 }
