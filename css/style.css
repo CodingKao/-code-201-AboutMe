@@ -12,22 +12,22 @@ body {
     color: red;
 }
 
-/* style for list */
-.ul {
-    list-style-type: disc;
-    padding: 10px;
-}
-
-li {
-    float: none;
-}
-
 /* header 2 style */
 h2 {
     font-weight: bold;
     color:rgb(87, 202, 87);
     font-size: 48px;
 }
+
+/* style for list */
+ul li {
+    list-style: circle inside none;
+}
+
+ol li {
+    list-style: number inside;
+}
+
 
 /* link color */
 a:link {
@@ -36,4 +36,8 @@ a:link {
 
 a:visited {
     color: coral;
+}
+
+footer {
+    text-align: center;
 }
