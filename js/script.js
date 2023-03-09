@@ -96,8 +96,8 @@ const guessLimit = 4;
 
 // Compare user input with secret num
 if(userGuess !==''){
-  // validage user input is a number
-  if(!isNaN(userGuess)) {
+  // validate user input is a number
+  if(isNaN(userGuess)) {
     // loop until counter is 4
     while(counter < 4) {
       // validate the guess is equal to the secret num
@@ -110,33 +110,101 @@ if(userGuess !==''){
       // if the guess is too high, prompt alert
       else if (Number(userGuess) > secretNum) {
         alert('Your guess is too high!');
+        console.log('You guessed: ' + userGuess);
+        counter++;
       }
       // if user guess is too low, prompt alert
       else if (Number(userGuess) < secretNum) {
         alert('Your guess is too low!');
+        console.log('You guessed: ' + userGuess);
+        counter++;
       }
       // icrement the counter
-      counter++;
+      // counter++;
       // Prompt user for another guess
-      userGuess = prompt('Guess again');
-      console.log('You guessed: ' + userGuess);
+      userGuess = prompt('Guess again, please enter a valid number');
     }
 
     // end after 4 gusses
-    if (counter === 3) {
+    if (counter === 4) {
       alert('Sorry! You have used up all your guesses.');
       alert('The secert number is ' + secretNum);
     }
+    // if the user guess is not a number, prompt alert
+    else {
+      alert('Please enter a number!');
+    }
   }
-  // if the user guess is not a number, prompt alert
+  // if the user guess is empty, prompt alert
   else {
-    alert('Please enter a number!');
+    alert('Please enter a guess!');
+
   }
 }
-// if the user guess is empty, prompt alert
-else {
-  alert('Please enter a number!');
+
+
+// 7th question for loop with arrays
+// Secert Answers
+const rbg = [red, blue, green];
+
+// Counter to track # of guesses
+let counter2 = 0;
+
+// prompt user for guess
+let userGuess2= prompt('What are the three primary colors in computer programming');
+console.log('You guessed: ' + userGuess2);
+
+// User guess limit 4
+const userLimit = 6;
+
+// Compare user input with secret num
+if(userGuess !==''){
+  // validate user input is a number
+  if(isNaN(userGuess)) {
+    // loop until counter is 4
+    while(counter < 4) {
+      // validate the guess is equal to the secret num
+      if (Number(userGuess) === secretNum) {
+      // if user guess corectly alert and end loop
+        alert('Yes, you guessed correctly.  Good Job!');
+        break;
+      }
+
+      // if the guess is too high, prompt alert
+      else if (Number(userGuess) > secretNum) {
+        alert('Your guess is too high!');
+        console.log('You guessed: ' + userGuess);
+        counter++;
+      }
+      // if user guess is too low, prompt alert
+      else if (Number(userGuess) < secretNum) {
+        alert('Your guess is too low!');
+        console.log('You guessed: ' + userGuess);
+        counter++;
+      }
+      // icrement the counter
+      // counter++;
+      // Prompt user for another guess
+      userGuess = prompt('Guess again, please enter a valid number');
+    }
+
+    // end after 4 gusses
+    if (counter === 4) {
+      alert('Sorry! You have used up all your guesses.');
+      alert('The secert number is ' + secretNum);
+    }
+    // if the user guess is not a number, prompt alert
+    else {
+      alert('Please enter a number!');
+    }
+  }
+  // if the user guess is empty, prompt alert
+  else {
+    alert('Please enter a guess!');
+
+  }
 }
+
 
 // Goodbye message
 alert('Thank you for vising, ' + userName + '.  See you next time.');
