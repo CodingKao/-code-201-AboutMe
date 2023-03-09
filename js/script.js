@@ -145,64 +145,34 @@ if(userGuess !==''){
 
 // 7th question for loop with arrays
 // Secert Answers
-const rbg = [red, blue, green];
+const stocks = ['Microsoft', 'General Electric', 'NTT Docomo', 'Cisco', 'Walmart', 'Intel', 'Nippon Telegraph', 'Nokia', 'Pfizer', 'Deutsche Telekom'];
 
 // Counter to track # of guesses
 let counter2 = 0;
 
 // prompt user for guess
-let userGuess2= prompt('What are the three primary colors in computer programming');
-console.log('You guessed: ' + userGuess2);
+alert('Now, let\'s test your knowledge of Stocks in the year 2000');
 
-// User guess limit 4
-const userLimit = 6;
+let stockGuess= prompt('Can you name any of the Top 10 Largest Companies by Market Cap at the start of 2000? I\'ll give you 6 attempts');
+console.log('You guessed: ' + stockGuess);
 
-// Compare user input with secret num
-if(userGuess !==''){
-  // validate user input is a number
-  if(isNaN(userGuess)) {
-    // loop until counter is 4
-    while(counter < 4) {
-      // validate the guess is equal to the secret num
-      if (Number(userGuess) === secretNum) {
-      // if user guess corectly alert and end loop
-        alert('Yes, you guessed correctly.  Good Job!');
-        break;
-      }
+// Give user 6 attempts
+const userAttempts = 6;
 
-      // if the guess is too high, prompt alert
-      else if (Number(userGuess) > secretNum) {
-        alert('Your guess is too high!');
-        console.log('You guessed: ' + userGuess);
-        counter++;
-      }
-      // if user guess is too low, prompt alert
-      else if (Number(userGuess) < secretNum) {
-        alert('Your guess is too low!');
-        console.log('You guessed: ' + userGuess);
-        counter++;
-      }
-      // icrement the counter
-      // counter++;
-      // Prompt user for another guess
-      userGuess = prompt('Guess again, please enter a valid number');
-    }
 
-    // end after 4 gusses
-    if (counter === 4) {
-      alert('Sorry! You have used up all your guesses.');
-      alert('The secert number is ' + secretNum);
-    }
-    // if the user guess is not a number, prompt alert
-    else {
-      alert('Please enter a number!');
-    }
+while (userAttempts > 0){
+  if (stocks.includes(stockGuess)){
+    alert('Congrats! You guessed correctly.');
+    break;
+  } else {
+    userAttempts--;
+    alert(`Incorrect answer. You have ${userAttempts} attempts left.`);
+      userAnswer = prompt('Guess again?');
   }
-  // if the user guess is empty, prompt alert
-  else {
-    alert('Please enter a guess!');
+}
 
-  }
+if (userAttempts === 0){
+  alert('You have no more attempts left. The correct answers are' + stocks);
 }
 
 
