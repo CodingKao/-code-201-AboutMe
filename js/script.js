@@ -2,18 +2,15 @@
 // Forces us to use keywords
 'use strict';
 
+// Keep track of score
+let score = 0;
 
-// //Initial greetings prompt
-// // eslint-disable-next-line no-unused-vars
-// function greetings(){
-//   alert('Hello! Welcome to my About me webpage.');
-//   let userName = prompt('First what is your name?').toLowerCase();
-//   console.log('userName:' + userName);
-//   alert('Hello, ' + userName + '.  Let\'s see how well you know me.');
 
-//   return userName;
-// }
-
+// Greetings
+alert('Hello! Welcome to my About me webpage.');
+let userName = prompt('First what is your name?');
+// console.log("userName:" + userName);
+alert('Hello, ' + userName + '.  Let\'s see how well you know me.');
 
 // 1st question
 // prompt 1st question
@@ -23,6 +20,7 @@ console.log('Born in Thailand: ' + thailand);
 //if user guess is correct
 if (thailand === 'yes' || thailand === 'y') {
   alert('Yes, that\'s correct!');
+  score++;
 } else {
   alert('Sorry that is incorrect.');
 }
@@ -36,6 +34,7 @@ console.log('In the Marnes: ' + marines);
 //if user guess is correct
 if (marines === 'yes' || marines === 'y') {
   alert('Yes, that\'s correct! I did. Semper Fi.');
+  score++;
 } else {
   alert('Sorry that is incorrect.');
 }
@@ -49,6 +48,7 @@ console.log('Go to PSU: ' + psu);
 //if user guess is correct
 if (psu === 'yes' || psu === 'y') {
   alert('Yes, that\'s correct! I did. Go Vikings!');
+  score++;
 } else {
   alert('Sorry that is incorrect.');
 }
@@ -62,6 +62,7 @@ console.log('Go to UP: ' + up);
 //if user guess is correct
 if (up === 'yes' || up === 'y') {
   alert('Yes, that\'s correct!');
+  score++;
 } else {
   alert('Sorry that is incorrect.');
 }
@@ -75,6 +76,7 @@ console.log('Attending Code Fellows: ' + codefellow);
 //if user guess is correct
 if (codefellow === 'yes' || codefellow === 'y') {
   alert('Yes, I am!');
+  score++;
 } else {
   alert('Sorry that is incorrect.');
 }
@@ -82,99 +84,105 @@ if (codefellow === 'yes' || codefellow === 'y') {
 
 // 6th question for loop
 // Secert Number
-const secretNum = 7;
+let secretNum = 7;
 
 // Counter to track # of guesses
 let counter = 0;
 
-// prompt user for guess
-let userGuess= prompt('I\'m thinking of a number between 1 - 10.  Can you guess it? You have 4 attempts?');
-console.log('You guessed: ' + userGuess);
+alert('Let\'s play a guessing game.');
 
-// User guess limit 4
-const guessLimit = 4;
+// loop until counter is 4
+while(counter < 4) {
 
-// Compare user input with secret num
-if(userGuess !==''){
-  // validate user input is a number
-  if(isNaN(userGuess)) {
-    // loop until counter is 4
-    while(counter < 4) {
-      // validate the guess is equal to the secret num
-      if (Number(userGuess) === secretNum) {
-      // if user guess corectly alert and end loop
-        alert('Yes, you guessed correctly.  Good Job!');
-        break;
-      }
+  // prompt user for guess
 
-      // if the guess is too high, prompt alert
-      else if (Number(userGuess) > secretNum) {
-        alert('Your guess is too high!');
-        console.log('You guessed: ' + userGuess);
-        counter++;
-      }
-      // if user guess is too low, prompt alert
-      else if (Number(userGuess) < secretNum) {
-        alert('Your guess is too low!');
-        console.log('You guessed: ' + userGuess);
-        counter++;
-      }
-      // icrement the counter
-      // counter++;
-      // Prompt user for another guess
-      userGuess = prompt('Guess again, please enter a valid number');
-    }
+  let userGuess= prompt('I\'m thinking of a number between 1 - 10.  Can you guess it? You have 4 attempts?');
+  console.log('You guessed: ' + userGuess);
+  counter++;
 
-    // end after 4 gusses
-    if (counter === 4) {
-      alert('Sorry! You have used up all your guesses.');
-      alert('The secert number is ' + secretNum);
-    }
-    // if the user guess is not a number, prompt alert
-    else {
-      alert('Please enter a number!');
-    }
-  }
-  // if the user guess is empty, prompt alert
-  else {
-    alert('Please enter a guess!');
+  // validate the guess is equal to the secret num
+  if (Number(userGuess) === secretNum) {
+    // if user guess corectly alert and end loop
+    alert('Yes, you guessed correctly.  Good Job!');
+    score++;
+    break;
+
+    // if the guess is too high, prompt alert
+  } else if (Number(userGuess) > secretNum) {
+    alert('Your guess is too high!');
+    console.log('You guessed: ' + userGuess);
+
+    // if user guess is too low, prompt alert
+  } else if (Number(userGuess) < secretNum) {
+    alert('Your guess is too low!');
+    console.log('You guessed: ' + userGuess);
 
   }
+
+
+  if (counter === 0) {
+    alert('You have 4 more attempts!!');
+  } else if (counter === 1) {
+    alert('You have 3 more attempts!!');
+  } else if (counter === 2) {
+    alert('You have 2 more attempts!!');
+  } else if (counter === 3) {
+    alert('This is your last attempt!');
+  }
+
 }
+
+// end after 4 gusses
+alert('The secert number is ' + secretNum);
 
 
 // 7th question for loop with arrays
-// Secert Answers
-const stocks = ['Microsoft', 'General Electric', 'NTT Docomo', 'Cisco', 'Walmart', 'Intel', 'Nippon Telegraph', 'Nokia', 'Pfizer', 'Deutsche Telekom'];
 
-// Counter to track # of guesses
-let counter2 = 0;
+// Define answer
+let answers = ['red', 'green', 'blue'];
 
-// prompt user for guess
-alert('Now, let\'s test your knowledge of Stocks in the year 2000');
+// how many attempts for user
+let attempts = 0;
 
-let stockGuess= prompt('Can you name any of the Top 10 Largest Companies by Market Cap at the start of 2000? I\'ll give you 6 attempts');
-console.log('You guessed: ' + stockGuess);
+while (attempts < 6) {
+  let userGuess2 = prompt('What are the primary colors used in programming languages? Hint: RBG');
+  console.log(userGuess2);
+  attempts++;
 
-// Give user 6 attempts
-const userAttempts = 6;
-
-
-while (userAttempts > 0){
-  if (stocks.includes(stockGuess)){
-    alert('Congrats! You guessed correctly.');
+  if (userGuess2 === answers[0]) {
+    alert('Yes! Red is one of the colors.  Good job!');
+    console.log(userGuess2);
+    score++;
     break;
-  } else {
-    userAttempts--;
-    alert(`Incorrect answer. You have ${userAttempts} attempts left.`);
-      userAnswer = prompt('Guess again?');
+
+  } else if (userGuess2 === answers[1]) {
+    alert('Yes! Green is one of the colors.  Good Job!');
+    console.log(userGuess2);
+    score++;
+    break;
+
+  } else if (userGuess2 === answers[2]) {
+    alert('Yes! Blue is one of the colors.  Good Job!');
+    console.log(userGuess2);
+    score++;
+    break;
+
+  } else if (userGuess2 === '') {
+    alert('You have to pick a color!');
+    console.log(userGuess2);
+
+  } else if (userGuess2 !== '') {
+    alert('Wrong. Try again.');
+    console.log(userGuess2);
+
   }
+
 }
 
-if (userAttempts === 0){
-  alert('You have no more attempts left. The correct answers are' + stocks);
+alert('The primary colors used in programming languages are Red, Green, and Blue (RGB).');
+
+while (score <= 7) {
+  score = alert('You got ' + score + ' questions correct!');
 }
 
-
-// Goodbye message
-alert('Thank you for vising, ' + userName + '.  See you next time.');
+alert('Thank you for visiting.  I hope you come back again ' + userName + '!');
