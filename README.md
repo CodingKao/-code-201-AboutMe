@@ -72,3 +72,5 @@ A style guide is a series of standards and practices that must be followed in or
 
 ### Class 3
 ![Lighthouse](img/lighthouse2.jpg)
+
+<!-- Kao was the navigator and Kenya was the driver -->
