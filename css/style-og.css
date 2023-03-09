@@ -1,0 +1,128 @@
+
+/* background color */
+body, html {
+    background-color: rgb(41, 39, 39);
+    color: white;
+}
+
+imgBanner {
+    width: 100%;
+    align-items: center;
+}
+
+/* header 1 style */
+ h1 {
+    color: red;
+}
+
+/* header 2 style */
+
+
+
+#sec0 {
+    display: flex;
+    text-align: center;
+}
+
+#me {
+    display: flex;
+    text-align: center;
+}
+
+/* #proj1 {
+    float: left;
+    text-align: center;
+    padding: 15px;
+    border: 15px;
+    margin: 15px;
+    border-color: 30px lightcoral;
+} */
+
+projtext {
+    text-align: center;
+    float: right;
+}
+
+
+#sec2 {
+    display: flex;
+    text-align: center;
+}
+
+#topten2 {
+    font-weight: bold;
+    color:rgb(87, 202, 87);
+    font-size: 25px;
+    text-align: center;
+}
+
+#hobbies2 {
+    font-weight: bold;
+    color:rgb(87, 202, 87);
+    font-size: 25px;
+    text-align: center;
+}
+
+
+#ten {
+    color:rgb(248, 248, 248);
+    font-size: 25px;
+    text-align: left;
+}
+
+#hobby {
+    color:rgb(248, 248, 248);
+    font-size: 25px;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+}
+
+
+
+img1 {
+    border-image-width: 10px;
+    width: 100%;
+}
+
+exp {
+    display: flex;
+
+}
+
+
+/* style for list */
+ul li {
+    list-style: circle inside none;
+}
+
+ol li {
+    list-style: number inside;
+}
+
+
+/* link color */
+a:link {
+    color: rgb(255, 238, 0);
+  }
+
+a:visited {
+    color: coral;
+}
+
+p {
+    text-align: right;
+}
+
+h2 {
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    color:rgb(48, 190, 48);
+    text-align: center;
+    padding: 15px;
+    border: 30px;
+    margin: 45px;
+}
