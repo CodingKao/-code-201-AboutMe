@@ -7,131 +7,154 @@ let score = 0;
 
 
 // Greetings
-alert('Hello! Welcome to my About me webpage.');
-let userName = prompt('First what is your name?');
-// console.log("userName:" + userName);
-alert('Hello, ' + userName + '.  Let\'s see how well you know me.');
+let userName;
+function greetings() {
+  alert('Hello! Welcome to my About me webpage.');
+  userName = prompt('First what is your name?');
+  console.log("userName:" + userName);
+  alert('Hello, ' + userName + '.  Let\'s see how well you know me.');
+}
+greetings();
 
 // 1st question
 // prompt 1st question
-let thailand = prompt('Was I born in Thailand? y/n or yes/no').toLowerCase();
-console.log('Born in Thailand: ' + thailand);
+function questionOne() {
 
-//if user guess is correct
-if (thailand === 'yes' || thailand === 'y') {
-  alert('Yes, that\'s correct!');
-  score++;
-} else {
-  alert('Sorry that is incorrect.');
+  let thailand = prompt('Was I born in Thailand? y/n or yes/no').toLowerCase();
+  console.log('Born in Thailand: ' + thailand);
+  
+  // if user guess is correct
+  if (thailand === 'yes' || thailand === 'y') {
+    alert('Yes, that\'s correct!');
+    score++;
+  } else {
+    alert('Sorry that is incorrect.');
+  }
 }
-
+questionOne();
 
 // 2nd question
 // prompt 2nd question
-let marines = prompt('Did I served in the Marine Corps? y/n or yes/no').toLowerCase();
-console.log('In the Marnes: ' + marines);
+function questionTwo() {
 
-//if user guess is correct
-if (marines === 'yes' || marines === 'y') {
-  alert('Yes, that\'s correct! I did. Semper Fi.');
-  score++;
-} else {
-  alert('Sorry that is incorrect.');
+  let marines = prompt('Did I served in the Marine Corps? y/n or yes/no').toLowerCase();
+  console.log('In the Marnes: ' + marines);
+  
+  // if user guess is correct
+  if (marines === 'yes' || marines === 'y') {
+    alert('Yes, that\'s correct! I did. Semper Fi.');
+    score++;
+  } else {
+    alert('Sorry that is incorrect.');
+  }
 }
-
+questionTwo();
 
 // 3rd question
 // prompt 3rd question
-let psu = prompt('Did I go to Portland State University? y/n or yes/no').toLowerCase();
-console.log('Go to PSU: ' + psu);
+function questionThree() {
 
-//if user guess is correct
-if (psu === 'yes' || psu === 'y') {
-  alert('Yes, that\'s correct! I did. Go Vikings!');
-  score++;
-} else {
-  alert('Sorry that is incorrect.');
+  let psu = prompt('Did I go to Portland State University? y/n or yes/no').toLowerCase();
+  console.log('Go to PSU: ' + psu);
+  
+  // if user guess is correct
+  if (psu === 'yes' || psu === 'y') {
+    alert('Yes, that\'s correct! I did. Go Vikings!');
+    score++;
+  } else {
+    alert('Sorry that is incorrect.');
+  }
 }
+questionThree();
 
 
 // 4th question
 // prompt 4th question
-let up = prompt('Did I go to University of Portland? y/n or yes/no').toLowerCase();
-console.log('Go to UP: ' + up);
+function questionFour() {
 
-//if user guess is correct
-if (up === 'yes' || up === 'y') {
-  alert('Yes, that\'s correct!');
-  score++;
-} else {
-  alert('Sorry that is incorrect.');
+  let up = prompt('Did I go to University of Portland? y/n or yes/no').toLowerCase();
+  console.log('Go to UP: ' + up);
+  
+  //if user guess is correct
+  if (up === 'yes' || up === 'y') {
+    alert('Yes, that\'s correct!');
+    score++;
+  } else {
+    alert('Sorry that is incorrect.');
+  }
 }
-
+questionFour();
 
 // 5th question
 // prompt 5th question
-let codefellow = prompt('Am I currently attending Code Fellows? y/n or yes/no').toLowerCase();
-console.log('Attending Code Fellows: ' + codefellow);
+function questionFive() {
 
-//if user guess is correct
-if (codefellow === 'yes' || codefellow === 'y') {
-  alert('Yes, I am!');
-  score++;
-} else {
-  alert('Sorry that is incorrect.');
+  let codefellow = prompt('Am I currently attending Code Fellows? y/n or yes/no').toLowerCase();
+  console.log('Attending Code Fellows: ' + codefellow);
+  
+  // if user guess is correct
+  if (codefellow === 'yes' || codefellow === 'y') {
+    alert('Yes, I am!');
+    score++;
+  } else {
+    alert('Sorry that is incorrect.');
+  }
 }
-
+questionFive();
 
 // 6th question for loop
 // Secert Number
-let secretNum = 7;
+function questionSix() {
 
-// Counter to track # of guesses
-let counter = 0;
-
-alert('Let\'s play a guessing game.');
-
-// loop until counter is 4
-while(counter < 4) {
-
-  // prompt user for guess
-
-  let userGuess= prompt('I\'m thinking of a number between 1 - 10.  Can you guess it? You have 4 attempts?');
-  console.log('You guessed: ' + userGuess);
-  counter++;
-
-  // validate the guess is equal to the secret num
-  if (Number(userGuess) === secretNum) {
-    // if user guess corectly alert and end loop
-    alert('Yes, you guessed correctly.  Good Job!');
-    score++;
-    break;
-
-    // if the guess is too high, prompt alert
-  } else if (Number(userGuess) > secretNum) {
-    alert('Your guess is too high!');
+  let secretNum = 7;
+  
+  // Counter to track # of guesses
+  let counter = 0;
+  
+  alert('Let\'s play a guessing game.');
+  
+  // loop until counter is 4
+  while(counter < 4) {
+    
+    // prompt user for guess
+    
+    let userGuess= prompt('I\'m thinking of a number between 1 - 10.  Can you guess it? You have 4 attempts?');
     console.log('You guessed: ' + userGuess);
-
-    // if user guess is too low, prompt alert
-  } else if (Number(userGuess) < secretNum) {
-    alert('Your guess is too low!');
-    console.log('You guessed: ' + userGuess);
-
+    counter++;
+    
+    // validate the guess is equal to the secret num
+    if (Number(userGuess) === secretNum) {
+      // if user guess corectly alert and end loop
+      alert('Yes, you guessed correctly.  Good Job!');
+      score++;
+      break;
+      
+      // if the guess is too high, prompt alert
+    } else if (Number(userGuess) > secretNum) {
+      alert('Your guess is too high!');
+      console.log('You guessed: ' + userGuess);
+      
+      // if user guess is too low, prompt alert
+    } else if (Number(userGuess) < secretNum) {
+      alert('Your guess is too low!');
+      console.log('You guessed: ' + userGuess);
+      
+    }
+    
+    
+    if (counter === 0) {
+      alert('You have 4 more attempts!!');
+    } else if (counter === 1) {
+      alert('You have 3 more attempts!!');
+    } else if (counter === 2) {
+      alert('You have 2 more attempts!!');
+    } else if (counter === 3) {
+      alert('This is your last attempt!');
+    }
+    
   }
-
-
-  if (counter === 0) {
-    alert('You have 4 more attempts!!');
-  } else if (counter === 1) {
-    alert('You have 3 more attempts!!');
-  } else if (counter === 2) {
-    alert('You have 2 more attempts!!');
-  } else if (counter === 3) {
-    alert('This is your last attempt!');
-  }
-
 }
-
+questionSix();
 // end after 4 gusses
 alert('The secert number is ' + secretNum);
 
