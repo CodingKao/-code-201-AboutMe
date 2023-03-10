@@ -4,26 +4,100 @@ body, html {
 }
 
 header h1 {
-    text-align: center;
+    text-align: left;
     font-size: 50px;
 }
 
 #about-social {
     display: flex;
+    text-align: center;
 }
 
 article h2 {
-    font-size: 50px;
+    font-size: 30px;
+}
+
+#flex {
+    display: flex;
+    padding: 15px;
+    border: 15px;
+    margin: 15px;
 }
 
 imgBanner {
     width: 100%;
-    align-items: stretch;
+    max-width: 100%;
+    height: auto;
 }
+
+.text1 {
+    overflow-wrap: break-word;
+    text-align: center;
+    max-width: 100%px;
+    font-size: 25px;
+}
+
+.proj1 {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border: 15;
+    margin: 15px;
+}
+
+.proj1 {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border: 15;
+    margin: 15px;
+}
+
+.proj1 {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border: 15;
+    margin: 15px;
+}
+
+.projcolor {
+    background-color: rgb(28, 243, 8);
+}
+
+.educolor {
+    background-color: rgb(160, 110, 4);
+}
+
+.expcolor {
+    background-color: rgb(8, 113, 184);
+}
+
+
+.topflex {
+    display: flex;
+}
+
+#toptext {
+    font-size: 20px;
+}
+
+#topborder {
+    padding: 20px;
+    margin: 20px;
+    border: 20px;
+}
+
 
 /* style for list */
 ul li {
     list-style: circle inside none;
+    text-align: left;
+    font-size: 25px;
+    text-indent: 30px;
 }
 
 ol li {
