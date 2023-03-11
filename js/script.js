@@ -11,7 +11,7 @@ let userName;
 function greetings() {
   alert('Hello! Welcome to my About me webpage.');
   userName = prompt('First what is your name?');
-  console.log('userName:' + userName);
+  // console.log('userName:' + userName);
   alert('Hello, ' + userName + '.  Let\'s see how well you know me.');
 }
 greetings();
@@ -21,7 +21,7 @@ greetings();
 function questionOne() {
 
   let thailand = prompt('Was I born in Thailand? y/n or yes/no').toLowerCase();
-  console.log('Born in Thailand: ' + thailand);
+  // console.log('Born in Thailand: ' + thailand);
 
   // if user guess is correct
   if (thailand === 'yes' || thailand === 'y') {
@@ -38,7 +38,7 @@ questionOne();
 function questionTwo() {
 
   let marines = prompt('Did I served in the Marine Corps? y/n or yes/no').toLowerCase();
-  console.log('In the Marnes: ' + marines);
+  // console.log('In the Marnes: ' + marines);
 
   // if user guess is correct
   if (marines === 'yes' || marines === 'y') {
@@ -55,7 +55,7 @@ questionTwo();
 function questionThree() {
 
   let psu = prompt('Did I go to Portland State University? y/n or yes/no').toLowerCase();
-  console.log('Go to PSU: ' + psu);
+  // console.log('Go to PSU: ' + psu);
 
   // if user guess is correct
   if (psu === 'yes' || psu === 'y') {
@@ -73,7 +73,7 @@ questionThree();
 function questionFour() {
 
   let up = prompt('Did I go to University of Portland? y/n or yes/no').toLowerCase();
-  console.log('Go to UP: ' + up);
+  // console.log('Go to UP: ' + up);
 
   //if user guess is correct
   if (up === 'yes' || up === 'y') {
@@ -90,7 +90,7 @@ questionFour();
 function questionFive() {
 
   let codefellow = prompt('Am I currently attending Code Fellows? y/n or yes/no').toLowerCase();
-  console.log('Attending Code Fellows: ' + codefellow);
+  // console.log('Attending Code Fellows: ' + codefellow);
 
   // if user guess is correct
   if (codefellow === 'yes' || codefellow === 'y') {
@@ -162,7 +162,7 @@ function questionSeven() {
 
   while (attempt > 0) {
     let userGuess2 = prompt('What are the primary colors used in programming languages? Hint: RBG').toLowerCase();
-    console.log(userGuess2);
+    // console.log(userGuess2);
     for (let i = 0; i < color.length; i++) {
       if (userGuess2 === color[i]) {
         alert('Good job! You answered correctly!');
